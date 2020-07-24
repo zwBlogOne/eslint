@@ -1,0 +1,61 @@
+module.exports = {
+  root: true,
+  extends: ['za', 'plugin:prettier/recommended'],
+  plugins: ['babel'],
+  env: {
+    browser: true,
+    es2020: true,
+  },
+  // extends: ["eslint:recommended", "plugin:react/recommended"],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 11,
+    sourceType: 'module',
+  },
+  parser: 'babel-eslint',
+
+  rules: {
+    'react/jsx-wrap-multilines': 0,
+    'react/prop-types': 0,
+    'react/forbid-prop-types': 0,
+    'react/jsx-one-expression-per-line': 0,
+    'generator-star-spacing': 0,
+    'function-paren-newline': 0,
+    'prettier/prettier': 'error',
+    'jsx-a11y/no-noninteractive-element-interactions': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'linebreak-style': 0,
+    'import/extensions': 0,
+    'no-prototype-builtins': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-default-export': [0, 'camel-case'],
+    'import/no-unresolved': 0,
+    'react/destructuring-assignment': 'off',
+    'react/jsx-filename-extension': 'off',
+    'no-use-before-define': [
+      'error',
+      { functions: false, classes: true, variables: true },
+    ],
+
+    'unicorn/prevent-abbreviations': 'off',
+    'import/no-cycle': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    // Conflict with prettier
+    'arrow-body-style': ['error', 'as-needed'],
+    'object-curly-newline': 0,
+    'implicit-arrow-linebreak': 0,
+    'operator-linebreak': 0,
+
+    'no-unused-vars': 0,
+    'no-dupe-keys': 0,
+    'import/no-duplicates': 0,
+    'react-hooks/rules-of-hooks': 0,
+    'react-hooks/exhaustive-deps': 0,
+    'react/no-array-index-key': 0,
+  },
+};
